@@ -81,7 +81,6 @@ def display_report():
         json_row = {}
         for key, value in row.items():
             if key in ['Type']:
-                # Check if the value exists in the form_group_dict before accessing it
                 json_row[key] = type_dict.get(value, value)
             elif key in ['Report Forms Group']:
                 json_row[key] = form_group_dict.get(value, value)
